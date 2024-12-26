@@ -1,0 +1,12 @@
+Flask
+Flask-JWT-Extended
+Flask-SQLAlchemy
+Flask-WTF
+Flask-Talisman
+Flask-CORS
+PyJWT
+pyotp
+requests
+qrcode
+cryptography
+pillow
