@@ -1,3 +1,25 @@
-#HACKATHON SOLUTION
+# Hackathon
+# Personal Data Vault
 
-PROBLEM NO 3: PERSONAL DATA VAULT
+## Overview
+The Personal Data Vault API is a secure backend service for managing sensitive user data, including passwords, files, and personal information. Built with Flask, it employs robust encryption, secure authentication, and data integrity measures to ensure user data remains safe.
+
+## Features
+- **User Authentication**: Secure user registration and login with JWT-based token management.
+- **File Upload & Encryption**: Users can upload sensitive files, which are encrypted before storage.
+- **Password Management**: Encrypted password storage and retrieval for various services.
+- **Breach Detection**: Integration with the "Have I Been Pwned" API for password and account breach detection.
+- **File Sharing**: Share sensitive files securely with other users.
+- **Rate Limiting**: API endpoints are rate-limited to protect against abuse.
+- **Audit Logging**: Logs actions for accountability and debugging purposes.
+- **Secure Sessions**: Tracks user sessions with token expiration and device info.
+
+## Tech Stack
+- **Backend Framework**: Flask
+- **Database**: SQLite (can be configured for other relational databases)
+- **Encryption**: AES for file and password encryption
+- **APIs Used**: "Have I Been Pwned" for breach detection
+- **Rate Limiting**: Flask-Limiter
+- **Frontend**: Placeholder setup for integration with future frontend applications
+
+## Project Structure
