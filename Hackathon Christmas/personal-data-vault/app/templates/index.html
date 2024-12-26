@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data Vault</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Data Vault</h1>
+        <!-- Auth Section -->
+        <div id="auth-section">
+            <div id="register">
+                <h2>Register</h2>
+                <input type="text" id="register-username" placeholder="Username">
+                <input type="password" id="register-password" placeholder="Password">
+                <button onclick="register()">Register</button>
+            </div>
+            <div id="login">
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard" style="display:none;">
+            <nav class="dashboard-nav">
+                <button onclick="showSection('files')">Files</button>
+                <button onclick="showSection('passwords')">Passwords</button>
+                <button onclick="showSection('sharing')">Sharing</button>
+                <button onclick="logout()">Logout</button>
+            </nav>
+
+            <!-- Files Section -->
+            <div id="files-section" class="dashboard-section">
+                <h2>File Management</h2>
+                <div class="upload-container">
+                    <input type="file" id="file-upload">
+                    <input type="text" id="file-category" placeholder="Category">
+                    <button onclick="uploadFile()">Upload File</button>
+                </div>
+                <div class="files-list">
+                    <h3>Your Files</h3>
+                    <ul id="file-list"></ul>
+                </div>
+            </div>
+
+            <!-- Passwords Section -->
+            <div id="passwords-section" class="dashboard-section" style="display:none;">
+                <h2>Password Manager</h2>
+                <div class="password-form">
+                    <input type="text" id="password-site" placeholder="Website/Service">
+                    <input type="text" id="password-username" placeholder="Username">
+                    <input type="password" id="password-password" placeholder="Password">
+                    <button onclick="addPassword()">Save Password</button>
+                </div>
+                <div class="passwords-list">
+                    <h3>Stored Passwords</h3>
+                    <ul id="passwords-list"></ul>
+                </div>
+                <button onclick="checkBreaches()" class="breach-check">Check for Breaches</button>
+                <div id="breach-alerts"></div>
+            </div>
+
+            <!-- Sharing Section -->
+            <div id="sharing-section" class="dashboard-section" style="display:none;">
+                <h2>File Sharing</h2>
+                <div class="sharing-form">
+                    <select id="file-to-share"></select>
+                    <input type="text" id="share-with-username" placeholder="Username to share with">
+                    <button onclick="shareFile()">Share File</button>
+                </div>
+                <div class="shared-files">
+                    <h3>Shared Files</h3>
+                    <ul id="shared-files-list"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert Modal -->
+        <div id="alert-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title"></h2>
+                <p id="modal-message"></p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
