@@ -23,3 +23,18 @@ The Personal Data Vault API is a secure backend service for managing sensitive u
 - **Frontend**: Placeholder setup for integration with future frontend applications
 
 ## Project Structure
+
+## Key Modules
+- **`auth.py`**: Handles user authentication and password verification.
+- **`breach_detection.py`**: Checks passwords and accounts against known breaches.
+- **`encryption_utils.py`**: Provides AES-based encryption and decryption utilities.
+- **`models.py`**: Defines database models for users, files, sessions, and logs.
+- **`routes.py`**: Implements API endpoints for user actions.
+
+## Installation
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/personal-data-vault.git
+   cd personal-data-vault
+
