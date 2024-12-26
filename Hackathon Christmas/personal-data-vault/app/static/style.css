@@ -1,0 +1,63 @@
+/* Existing styles remain */
+
+.dashboard-nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.dashboard-section {
+    margin: 20px 0;
+}
+
+.upload-container, .password-form, .sharing-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.files-list, .passwords-list, .shared-files {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #2b2b40;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.breach-check {
+    background-color: #dc3545;
+}
+
+.breach-check:hover {
+    background-color: #c82333;
+}
+
+#breach-alerts {
+    color: #dc3545;
+    margin-top: 10px;
+}
