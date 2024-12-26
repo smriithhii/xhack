@@ -41,13 +41,13 @@ The Personal Data Vault API is a secure backend service for managing sensitive u
    ```python3 -m venv venv
    source venv/bin/activate   # On Windows: venv\Scripts\activate
 3. **Install Dependencies**
-   pip install -r requirements.txt
+   ```pip install -r requirements.txt
 4. **Initialize the Database**
-   flask db init
+   ```flask db init
    flask db migrate
    flask db upgrade
 5. **Run the Application**
-   flask run
+   ```flask run
 
 ## API Endpoints
 
