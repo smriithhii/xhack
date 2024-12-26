@@ -38,7 +38,7 @@ The Personal Data Vault API is a secure backend service for managing sensitive u
    git clone https://github.com/your-username/personal-data-vault.git
    cd personal-data-vault
 2. **Set up a Virtual Environment**
-   python3 -m venv venv
+   ```python3 -m venv venv
    source venv/bin/activate   # On Windows: venv\Scripts\activate
 3. **Install Dependencies**
    pip install -r requirements.txt
