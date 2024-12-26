@@ -37,4 +37,54 @@ The Personal Data Vault API is a secure backend service for managing sensitive u
    ```bash
    git clone https://github.com/your-username/personal-data-vault.git
    cd personal-data-vault
+2. **Set up a Virtual Environment**
+   python3 -m venv venv
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
+3. **Install Dependencies**
+   pip install -r requirements.txt
+4. **Initialize the Database**
+   flask db init
+   flask db migrate
+   flask db upgrade
+5. **Run the Application**
+   flask run
+
+## API Endpoints
+
+### Authentication
+- **`POST /register`**: Register a new user
+- **`POST /login`**: Login and retrieve an access token
+
+### File Management
+- **`POST /upload`**: Upload a file (encrypted storage)
+- **`GET /files`**: List uploaded files
+- **`GET /files/<file_id>`**: Retrieve a file (decrypted)
+
+### Password Management
+- **`POST /passwords`**: Add a new password
+- **`GET /passwords`**: Retrieve stored passwords
+
+### File Sharing
+- **`POST /share`**: Share a file with another user
+
+### Breach Detection
+- **Automatic checks for passwords and accounts against known breaches.**
+
+---
+
+## Security Features
+- **Encryption**: All sensitive data is encrypted using AES before storage.
+- **JWT Authentication**: Secure session management.
+- **CSRF Protection**: Protects against cross-site request forgery.
+- **Rate Limiting**: Prevents abuse of endpoints.
+- **Talisman**: Adds secure HTTP headers.
+
+---
+
+## Future Enhancements
+- Multi-factor authentication (MFA)
+- Advanced user role management
+- Integration with external cloud storage
+- Frontend application for easier user interaction
+
 
